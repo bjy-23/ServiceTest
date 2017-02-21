@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="bjy.myservice" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".TestService1">
+            <intent-filter>
+                <action android:name="bjy.myservice.TestService1"/>
+            </intent-filter>
+        </service>
+        <service android:name=".TestService2" android:exported="false">
+            <intent-filter>
+                <action android:name="bjy.myservice.TestService2"></action>
+            </intent-filter>
+        </service>
+        <service android:name=".TestService3" android:exported="false">
+            <intent-filter>
+                <action android:name="bjy.myservice.TestServicce3"></action>
+            </intent-filter>
+        </service>
+        <service android:name=".TestService4" android:exported="false">
+            <intent-filter>
+                <action android:name="bjy.myservice.TestService4"/>
+            </intent-filter>
+        </service>
+        <service android:name=".TestService5" android:exported="false">
+            <intent-filter>
+                <action android:name="bjy.myservice.TestService5"/>
+            </intent-filter>
+        </service>
+
+        <receiver android:name=".AlarmReceiver"></receiver>
+
+    </application>
+
+
+
+</manifest>
